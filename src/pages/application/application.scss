@@ -1,0 +1,29 @@
+@import "../../styles/base/fn";
+
+.application {
+  &-header {
+    padding: 40rpx;
+    margin-bottom: 40rpx;
+    background-color: $backgroundColor_foreColor;
+    border-bottom: 1rpx solid $lineColor_default;
+
+    &-text {
+      font-size: $fontSize_titleBig;
+      margin-right: 20rpx;
+      vertical-align: middle;
+    }
+    &-button{
+      vertical-align: middle;
+    }
+    &-icon {
+      width: 120rpx;
+      height: 120rpx;
+      margin-right: 20rpx;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+  }
+
+  &-main {
+  }
+}

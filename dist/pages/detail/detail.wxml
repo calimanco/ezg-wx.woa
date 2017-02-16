@@ -1,0 +1,36 @@
+<import src="/templates/template_detail.wxml" />
+
+<view class="body {{fixClass?'fixClass':''}}">
+  <view class="detail-os" wx:if="{{mode.os}}">
+    <template is="detail_os_baseInfo" data="{{detailData}}" />
+    <template is="detail_os_production" data="{{detailData}}" wx:if="{{detailData.productionList}}" />
+    <template is="detail_os_remark" data="{{detailData}}" />
+  </view>
+  <view class="detail-wo" wx:if="{{mode.wo}}">
+    <template is="detail_wo_baseInfo" data="{{detailData}}" />
+    <template is="detail_wo_contact" data="{{detailData}}" />
+    <template is="detail_wo_process" data="{{detailData}}" wx:if="{{detailData.processList.length!=0}}" />
+  </view>
+  <view class="detail-company" wx:if="{{mode.company}}">
+    <template is="detail_company_baseInfo" data="{{detailData}}" />
+    <template is="detail_company_woList" data="{{detailData}}" wx:if="{{detailData.processList.length!=0}}" />
+  </view>
+  <view class="detail-production" wx:if="{{mode.production}}">
+    <template is="detail_production_baseInfo" data="{{detailData}}" />
+  </view>
+  <view class="detail-customer" wx:if="{{mode.customer}}">
+    <template is="detail_customer_baseInfo" data="{{detailData}}" />
+    <template is="detail_customer_companyList" data="{{detailData}}" wx:if="{{detailData.processList.length!=0}}" />
+  </view>
+  <view class="detail-complain" wx:if="{{mode.complain}}">
+
+  </view>
+</view>
+
+<view class="detail-button" wx:if="{{permissions.os_remark}}">
+  <button class="detail-button-submit" type="default" bindtap="goEdit" data-extra="overrule" data-aim="os_remark">驳回</button>
+  <button class="detail-button-submit" type="main" bindtap="goEdit" data-extra="agree" data-aim="os_remark">同意</button>
+</view>
+<view class="detail-button" wx:if="{{permissions.wo_process}}">
+  <button class="detail-button-submit" type="main" bindtap="goEdit" data-aim="wo_process">流转</button>
+</view>

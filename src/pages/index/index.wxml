@@ -1,0 +1,20 @@
+<import src="/templates/floatingButton.wxml" />
+
+<template is="floatingButton_add" />
+
+<view class="body">
+  <view class="index">
+    <navigator class="index-item" hover-class="active" url="/pages/list/list?mode=os&aim=reviewDynamics" wx:if="{{approveDynamics}}">
+      <image class="index-item-icon {{approveDynamics.length==0?'noNumber':''}}" src="../../images/icon_msg.png" data-count="{{approveDynamics.length}}"></image>
+      <view class="index-item-title">审批动态</view>
+    </navigator>
+    <navigator class="index-item" hover-class="active" url="/pages/list/list?mode=os&aim=debtDynamics" wx:if="{{debtDynamics}}">
+      <image class="index-item-icon {{debtDynamics.length==0?'noNumber':''}}" src="../../images/icon_msg.png" data-count="{{debtDynamics.length}}"></image>
+      <view class="index-item-title">余款动态</view>
+    </navigator>
+    <navigator class="index-item" hover-class="active" url="/pages/list/list?mode=wo&aim=woDynamics" wx:if="{{woDynamics}}">
+      <image class="index-item-icon {{woDynamics.length==0?'noNumber':''}}" src="../../images/icon_msg.png" data-count="{{woDynamics.length}}"></image>
+      <view class="index-item-title">工单动态</view>
+    </navigator>
+  </view>
+</view>

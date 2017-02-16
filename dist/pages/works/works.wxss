@@ -1,0 +1,45 @@
+.work {
+  margin-top: 100rpx; }
+
+.work-item {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: #ffffff;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20rpx; }
+  .work-item.active {
+    background-color: #ececec; }
+  .work-item-name {
+    color: #000000;
+    font-size: 34rpx; }
+  .work-item-number {
+    color: #888888;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx; }
+  .work-item-price {
+    color: #888888;
+    font-size: 28rpx; }
+  .work-item-paid {
+    color: #888888;
+    font-size: 28rpx; }
+  .work-item-time {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    font-size: 26rpx;
+    color: #888888; }
+  .work-item-state {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: 26rpx;
+    color: #952f2a; }
+
+.work-empty {
+  text-align: center;
+  margin-top: 300rpx; }

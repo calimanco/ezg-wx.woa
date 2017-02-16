@@ -1,0 +1,49 @@
+@import "../base/fn";
+.list-item {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: center;
+  position: relative;
+  background-color: $backgroundColor_foreColor;
+  border-top: 1px solid $lineColor_default;
+  border-bottom: 1px solid $lineColor_default;
+  margin-bottom: 20rpx;
+  &.active {
+    background-color: $backgroundColor_active;
+  }
+  &-name {
+    color: $textColor_title;
+    font-size: $fontSize_title;
+    line-height: 1.5;
+  }
+  &-number {
+    color: $textColor_sub;
+    font-size: $fontSize_small;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+  }
+  &-info {
+    color: $textColor_sub;
+    font-size: $fontSize_titleSub;
+  }
+  &-time {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_sub;
+  }
+  &-state {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_active;
+  }
+}
+
+.list-empty {
+  text-align: center;
+  margin-top: 300rpx;
+}

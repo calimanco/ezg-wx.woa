@@ -1,0 +1,17 @@
+.application-header {
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #d9d9d9; }
+  .application-header-text {
+    font-size: 40rpx;
+    margin-right: 20rpx;
+    vertical-align: middle; }
+  .application-header-button {
+    vertical-align: middle; }
+  .application-header-icon {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+    vertical-align: middle; }

@@ -1,0 +1,51 @@
+@import "../../styles/base/fn";
+
+.index {
+  &-item {
+    background-color: $backgroundColor_foreColor;
+    border-top: 1rpx solid $lineColor_default;
+    border-bottom: 1rpx solid $lineColor_default;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+
+    &.active {
+      background-color: $backgroundColor_active;
+    }
+
+    &-icon {
+      width: 110rpx;
+      height: 110rpx;
+      position: relative;
+      overflow: visible;
+
+      &.noNumber{
+        &:after {
+          display: none;
+        }
+      }
+
+      &:after {
+        content: attr(data-count);
+        position: absolute;
+        width: 50rpx;
+        height: 50rpx;
+        line-height: 55rpx;
+        border-radius: 50%;
+        right: -10rpx;
+        top: 0;
+        background-color: $theme_warn;
+        color: $textColor_fordark;
+        text-align: center;
+      }
+    }
+
+    &-title {
+      padding-left: 30rpx;
+      color: $textColor_title;
+      font-size: $fontSize_title;
+    }
+  }
+}

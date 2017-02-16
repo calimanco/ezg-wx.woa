@@ -1,0 +1,136 @@
+@import "../base/fn";
+
+.detail-main {
+  border-top: 1rpx solid $lineColor_default;
+  border-bottom: 1rpx solid $lineColor_default;
+  margin-bottom: 30rpx;
+  background-color: $backgroundColor_foreColor;
+  position: relative;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.detail-item {
+  background-color: $backgroundColor_foreColor;
+  padding: 20rpx;
+  position: relative;
+  font-size: $fontSize_titleSub;
+
+  &:after {
+    @include setBottomLine;
+    left: 20rpx;
+    right: 20rpx;
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+
+  &.title {
+    line-height: 1.5;
+    color: $textColor_title;
+    font-size: $fontSize_title;
+  }
+
+  &.subTitle {
+    color: $textColor_title;
+  }
+
+  &.sub {
+    color: $textColor_sub;
+  }
+
+  &.noPaddingTop {
+    padding-top: 0;
+  }
+
+  &.noPaddingBottom {
+    padding-bottom: 0;
+  }
+
+  &.noBorder {
+    &:after {
+      display: none;
+    }
+  }
+
+  &-textarea {
+    background-color: $backgroundColor_active;
+    padding: 10rpx;
+    font-size: $fontSize_default;
+  }
+
+  &-createDate {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_sub;
+    z-index: 10;
+  }
+  &-tip {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_active;
+  }
+}
+
+.detail-list {
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &:after {
+    @include setBottomLine;
+    left: 20rpx;
+    right: 20rpx;
+  }
+}
+
+.detail-remarkButtom {
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &-icon {
+    width: 30rpx;
+    height: 30rpx;
+  }
+
+  &-text {
+    font-size: $fontSize_small;
+    margin-left: 10rpx;
+  }
+}
+
+.detail-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2rpx;
+  z-index: 11;
+  &-submit {
+    flex: 1;
+    border-radius: 0;
+    &:after{
+      border-radius: 0;
+    }
+  }
+}

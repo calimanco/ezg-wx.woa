@@ -1,0 +1,6 @@
+<!-- 悬浮按钮模板 -->
+<template name="floatingButton_add">
+  <view class="floatingButton" bindtap="showActionSheet">
+    <image class="floatingButton-icon" mode="aspectFit" src="/images/icon_pen.png" />
+  </view>
+</template>

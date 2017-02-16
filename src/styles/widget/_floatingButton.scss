@@ -1,0 +1,21 @@
+@import "../base/fn";
+.floatingButton{
+  position: fixed;
+  bottom: 50rpx;
+  right: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  border-radius: 50%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  z-index: 99;
+  background: $theme_primary;
+  box-shadow: 1rpx 1rpx 1rpx 2rpx $lineColor_default;
+}
+.floatingButton-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}

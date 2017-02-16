@@ -1,0 +1,17 @@
+.login-logo {
+  width: 275rpx;
+  height: 131rpx;
+  margin: 100rpx auto 80rpx auto;
+  display: block; }
+
+.login-section {
+  padding: 20rpx;
+  background: #ffffff;
+  margin-bottom: 20rpx; }
+
+.login-button {
+  padding: 20rpx; }
+
+.login-info {
+  padding: 20rpx;
+  font-size: 26rpx; }

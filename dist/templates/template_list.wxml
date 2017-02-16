@@ -1,0 +1,69 @@
+<template name="list_os">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=os&id='+item.osId}}">
+      <view class="list-item-name">{{item.companyName}}</view>
+      <view class="list-item-number">订单号：{{item.osCode}}</view>
+      <view class="list-item-info">订单价：{{item.payNumber}}元</view>
+      <view class="list-item-info">已付款：{{item.realNumber}}元</view>
+      <view class="list-item-time">{{item.createDate}}</view>
+      <view class="list-item-state">{{item.processType}}</view>
+    </navigator>
+  </block>
+</template>
+
+<template name="list_wo">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=wo&id='+item.woId}}">
+      <view class="list-item-name">{{item.companyName}}</view>
+      <view class="list-item-number">订单号：{{item.osCode}}</view>
+      <view class="list-item-info">产品名：{{item.productionName}}</view>
+      <view class="list-item-info">服务人员：{{item.staff}}</view>
+      <view class="list-item-time">{{item.createDate}}</view>
+      <view class="list-item-state">{{item.currentprocess}}</view>
+    </navigator>
+  </block>
+</template>
+
+<template name="list_production">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=production&id='+item.productionId}}">
+      <view class="list-item-name">{{item.productionName}}</view>
+      <view class="list-item-info">服务地区：{{item.productionArea}}</view>
+      <view class="list-item-info">产品价格：{{item.productionPrice}}</view>
+      <view class="list-item-state">{{item.productionType}}</view>
+    </navigator>
+  </block>
+</template>
+
+<template name="list_customer">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=customer&id='+item.customerId}}">
+      <view class="list-item-name">{{item.customerName}}</view>
+      <view class="list-item-info">客户电话：{{item.customerTel}}</view>
+      <view class="list-item-info">客户地区：{{item.customerArea}}</view>
+      <view class="list-item-state">{{item.customerType}}</view>
+    </navigator>
+  </block>
+</template>
+
+<template name="list_company">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=company&id='+item.companyId}}">
+      <view class="list-item-name">{{item.companyName}}</view>
+      <view class="list-item-info">法人：{{item.legalPerson}}</view>
+      <view class="list-item-info">归属客户：{{item.customerName}}</view>
+      <view class="list-item-state">{{item.companyLv}}</view>
+    </navigator>
+  </block>
+</template>
+
+<template name="list_complain">
+  <block wx:for="{{listData}}" wx:key="index">
+    <navigator class="list-item" hover-class="active" url="{{'/pages/detail/detail?mode=company&id='+item.companyId}}">
+      <view class="list-item-name">{{item.companyName}}</view>
+      <view class="list-item-info">法人：{{item.legalPerson}}</view>
+      <view class="list-item-info">归属客户：{{item.customerName}}</view>
+      <view class="list-item-state">{{item.companyLv}}</view>
+    </navigator>
+  </block>
+</template>

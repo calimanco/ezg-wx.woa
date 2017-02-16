@@ -1,0 +1,64 @@
+@import "../../styles/base/fn";
+
+.work {
+  margin-top: 100rpx;
+}
+
+.work-item {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: $backgroundColor_foreColor;
+  border-top: 1px solid $lineColor_default;
+  border-bottom: 1px solid $lineColor_default;
+  margin-bottom: 20rpx;
+
+  &.active {
+    background-color: $backgroundColor_active;
+  }
+
+  &-name {
+    color: $textColor_title;
+    font-size: $fontSize_title;
+  }
+
+  &-number {
+    color: $textColor_sub;
+    font-size: $fontSize_small;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+  }
+
+  &-price {
+    color: $textColor_sub;
+    font-size: $fontSize_titleSub;
+  }
+
+  &-paid {
+    color: $textColor_sub;
+    font-size: $fontSize_titleSub;
+  }
+
+  &-time {
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_sub;
+  }
+
+  &-state {
+    position: absolute;
+    right: 20rpx;
+    bottom: 20rpx;
+    font-size: $fontSize_small;
+    color: $textColor_active;
+  }
+}
+
+.work-empty {
+  text-align: center;
+  margin-top: 300rpx;
+}

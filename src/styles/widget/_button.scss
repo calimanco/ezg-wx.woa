@@ -1,0 +1,32 @@
+@import "../base/fn";
+
+button[type="main"]{
+  background-color: $theme_primary;
+  color: $textColor_fordark;
+  &.button-hover{
+    background-color: $theme_press;
+  }
+}
+button[type="main"]:not([disabled]):active{
+
+}
+button[disabled][type="main"]{
+  background: $theme_disabled;
+}
+
+button[type="main"][plain]{
+  color: $theme_primary;
+  border-color: $theme_primary;
+  background-color: transparent;
+  &.button-hover{
+    background-color: transparent;
+  }
+}
+button[type="main"][plain]:not([disabled]):active{
+  color: $theme_press;
+  border-color: $theme_press;
+}
+button[type="main"][plain][disabled]{
+  color: $theme_disabled;
+  border-color: $theme_disabled;
+}

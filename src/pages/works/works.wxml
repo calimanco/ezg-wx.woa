@@ -1,0 +1,21 @@
+<import src="/templates/template_search.wxml" />
+<import src="/templates/floatingButton.wxml" />
+<template is="search_forwork" data="{{inputVal}}" />
+<template is="floatingButton_add" />
+
+
+<view class="body work">
+  <view class="work-empty" wx:if="{{list.length <= 0}}">
+    数据库中没有匹配数据
+  </view>
+  <block wx:for="{{list}}" wx:key="index">
+    <navigator class="work-item" hover-class="active" url="../os/os">
+      <view class="work-item-name">{{item.name}}</view>
+      <view class="work-item-number">编号：{{item.number}}</view>
+      <view class="work-item-price">订单价：{{item.price}}元</view>
+      <view class="work-item-paid">已付款：{{item.paid}}元</view>
+      <view class="work-item-time">{{item.time}}</view>
+      <view class="work-item-state">{{item.state}}</view>
+    </navigator>
+  </block>
+</view>

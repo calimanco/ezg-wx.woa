@@ -1,0 +1,54 @@
+<!-- 用于表示操作顺利达成 -->
+<template name="msg_success">
+  <view class="msg-box">
+    <icon class="msg-box-icon" type="success" size="100"></icon>
+    <view class="msg-box-title">{{infoMsg.title}}</view>
+    <view class="msg-box-info">{{infoMsg.info}}</view>
+    <button class="msg-box-button" type="main" bindtap="location" wx:if="{{msg.mainButton}}" data-href="{{msg.mainUrl}}">{{msg.mainButton}}</button>
+    <button class="msg-box-button" type="default" bindtap="location" wx:if="{{msg.subButton}}" data-href="{{msg.subUrl}}">{{msg.subButton}}</button>
+  </view>
+</template>
+
+<!-- 用于表示信息提示；也常用于缺乏条件的操作拦截，提示用户所需信息 -->
+<template name="msg_default">
+  <view class="msg-box">
+    <icon class="msg-box-icon" type="info" size="100"></icon>
+    <view class="msg-box-title">{{msg.title}}</view>
+    <view class="msg-box-info">{{msg.info}}</view>
+    <button class="msg-box-button" type="main" bindtap="location" wx:if="{{msg.mainButton}}" data-href="{{msg.mainUrl}}">{{msg.mainButton}}</button>
+    <button class="msg-box-button" type="default" bindtap="location" wx:if="{{msg.subButton}}" data-href="{{msg.subUrl}}">{{msg.subButton}}</button>
+  </view>
+</template>
+
+<!-- 用于表示操作后将引起一定后果的情况 -->
+<template name="msg_warn">
+  <view class="msg-box">
+    <icon class="msg-box-icon" type="warn" size="100" color="#999999"></icon>
+    <view class="msg-box-title">{{msg.title}}</view>
+    <view class="msg-box-info">{{msg.info}}</view>
+    <button class="msg-box-button" type="main" bindtap="location" wx:if="{{msg.mainButton}}" data-href="{{msg.mainUrl}}">{{msg.mainButton}}</button>
+    <button class="msg-box-button" type="default" bindtap="location" wx:if="{{msg.subButton}}" data-href="{{msg.subUrl}}">{{msg.subButton}}</button>
+  </view>
+</template>
+
+<!-- 用于表示操作后将引起严重的不可挽回的后果的情况 -->
+<template name="msg_error">
+  <view class="msg-box">
+    <icon class="msg-box-icon" type="warn" size="100"></icon>
+    <view class="msg-box-title">{{msg.title}}</view>
+    <view class="msg-box-info">{{msg.info}}</view>
+    <button class="msg-box-button" type="main" bindtap="location" wx:if="{{msg.mainButton}}" data-href="{{msg.mainUrl}}">{{msg.mainButton}}</button>
+    <button class="msg-box-button" type="default" bindtap="location" wx:if="{{msg.subButton}}" data-href="{{msg.subUrl}}">{{msg.subButton}}</button>
+  </view>
+</template>
+
+<!-- 用于表示等待 -->
+<template name="msg_waiting">
+  <view class="msg-box">
+    <icon class="msg-box-icon" type="waiting" size="100"></icon>
+    <view class="msg-box-title">{{msg.title}}</view>
+    <view class="msg-box-info">{{msg.info}}</view>
+    <button class="msg-box-button" type="main" bindtap="location" wx:if="{{msg.mainButton}}" data-href="{{msg.mainUrl}}">{{msg.mainButton}}</button>
+    <button class="msg-box-button" type="default" bindtap="location" wx:if="{{msg.subButton}}" data-href="{{msg.subUrl}}">{{msg.subButton}}</button>
+  </view>
+</template>

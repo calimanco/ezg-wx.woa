@@ -1,0 +1,61 @@
+@import "../base/fn";
+%msg-box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: table;
+  width: 500rpx;
+  text-align: center;
+  padding-bottom: 200rpx;
+}
+%msg-box-icon{
+  display: block;
+  margin: 0 auto 20rpx auto;
+  color: red;
+}
+%msg-box-title{
+  font-size: $fontSize_titleBig;
+  color: $textColor_title;
+  line-height: 2;
+}
+%msg-box-info{
+  font-size: $fontSize_titleSub;
+  color: $textColor_sub;
+}
+%msg-box-button{
+  margin-top: 30rpx;
+  &:last-child{
+    margin-top: 10rpx;
+  }
+}
+
+@mixin infoBox($msg-box:true,$msg-box-icon:true,$msg-box-title:true,$msg-box-info:true,$msg-box-button:true) {
+  @if($msg-box){
+    .msg-box {
+      @extend %msg-box;
+    }
+  }
+  @if($msg-box-icon){
+    .msg-box-icon {
+      @extend %msg-box-icon;
+    }
+  }
+  @if($msg-box-title){
+    .msg-box-title {
+      @extend %msg-box-title;
+    }
+  }
+  @if($msg-box-info){
+    .msg-box-info {
+      @extend %msg-box-info;
+    }
+  }
+  @if($msg-box-button){
+    .msg-box-button{
+      @extend %msg-box-button;
+    }
+  }
+}

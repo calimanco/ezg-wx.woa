@@ -1,0 +1,66 @@
+@import "../base/fn";
+
+.search {
+  padding: 20rpx;
+  display: flex;
+  background: $backgroundColor_active;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-sizing: border-box;
+
+  &.forwork{
+    padding: 20rpx 0 20rpx 20rpx;
+  }
+
+  &-box {
+    display: flex;
+    flex: 8;
+    background-color: $backgroundColor_foreColor;
+    position: relative;
+    border-radius: 10rpx;
+    z-index: 1;
+
+    &-icon {
+      width: 60rpx;
+      height: 60rpx;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+    &-clear {
+      position: absolute;
+      top: -20rpx;
+      right: 0;
+      width: 80rpx;
+      height: 100rpx;
+      z-index: 10;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &-option{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-icon{
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 auto;
+  }
+}

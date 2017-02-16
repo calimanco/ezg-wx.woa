@@ -1,0 +1,26 @@
+<view class="body">
+  <image class="login-logo" mode="aspectFit" src="/images/LOGO_black.png" />
+  <view class="login-section">
+    <input placeholder="请输入用户名" focus bindinput="keyInput" id="username" />
+  </view>
+  <view class="login-section">
+    <input placeholder="请输入密码" bindinput="keyInput" id="password" password="true" />
+  </view>
+  <view class="login-button">
+    <button type="main" loading="{{loading}}" disabled="{{disabled}}" bindtap="bindAccount">登录</button>
+  </view>
+  <view class="login-info">
+    <view>
+      您的微信未绑定woa的帐号，请先完成绑定操作。
+    </view>
+    <view>
+      您需注意以下两点：
+    </view>
+    <view>
+      1、一个微信限绑定一个woa帐号，可在应用中进行解绑操作。
+    </view>
+    <view>
+      2、绑定后会自动跳转至首页，等待刷新即可生效。
+    </view>
+  </view>
+</view>

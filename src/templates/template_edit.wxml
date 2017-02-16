@@ -1,0 +1,23 @@
+<template name="edit_os_remark">
+  <view class="edit">
+    <view class="edit-title">审批备注</view>
+    <view class="edit-section">
+      <textarea class="edit-section-textarea" placeholder="请填写备注（可选）" focus bindinput='getText'/>
+    </view>
+  </view>
+</template>
+
+<template name="edit_wo_process">
+  <view class="edit">
+    <view class="edit-title">工单流转</view>
+    <!-- <view class="edit-section">
+      当前流程：<text>{{editData.nowProcess}}</text></view>
+    </view>
+    <view class="edit-section">
+      下一流程：<text>{{editData.nextProcess}}</text></view>
+    </view> -->
+    <view class="edit-section">
+      <textarea class="edit-section-textarea" placeholder="请填写备注（可选）" focus bindinput='getText'/>
+    </view>
+  </view>
+</template>

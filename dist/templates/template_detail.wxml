@@ -1,0 +1,217 @@
+<!-- 订单基本信息模板 -->
+<template name="detail_os_baseInfo">
+  <view class="detail-main">
+    <view class="detail-item title">基本信息</view>
+    <view class="detail-item">订单号码：<text>{{detailData.osCode}}</text></view>
+    <view class="detail-item">客户公司：<text>{{detailData.companyName}}</text></view>
+    <view class="detail-item">订单价格：<text>{{detailData.payNumber}}</text></view>
+    <view class="detail-item">已付金额：<text>{{detailData.realNumber}}</text></view>
+    <view class="detail-item">是否缴费：<text>{{detailData.isPaid}}</text></view>
+    <view class="detail-item">缴费渠道：<text>{{detailData.payWay}}</text></view>
+    <view class="detail-item">缴费日期：<text>{{detailData.payDate}}</text></view>
+  </view>
+</template>
+
+<!-- 订单产品信息模板 -->
+<template name="detail_os_production">
+  <view class="detail-main">
+    <view class="detail-item title">产品明细</view>
+    <block wx:for="{{detailData.productionList}}" wx:key="index">
+      <view class="detail-list">
+        <view class="detail-item subTitle noBorder">
+          <text>{{item.productionName}}</text>
+        </view>
+        <view class="detail-item noBorder sub noPaddingTop noPaddingBottom">
+          销售价：{{item.productionSellPrice}}元
+        </view>
+        <view class="detail-item noBorder sub noPaddingTop">
+          销售价：{{item.productionSellPrice}}元
+          <view class="detail-remarkButtom" wx:if="{{item.serviceRemark}}" bindtap="toggle" id="{{index}}" data-aim="detailData.productionList">
+            <image class="detail-remarkButtom-icon" src="/images/icon_remark.png"/>
+            <view class="detail-remarkButtom-text">备注</view>
+          </view>
+        </view>
+        <view class="detail-item noPaddingTop" wx:if="{{item.isOpen}}">
+          <view class="detail-item-textarea">
+            <text>{{item.serviceRemark?item.serviceRemark:'[无]'}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+
+<!-- 审批备注模板 -->
+<template name="detail_os_remark">
+  <view class="detail-main">
+    <view class="detail-item title">审批动态</view>
+      <block wx:for="{{detailData.remarkList}}" wx:key="index">
+        <view class="detail-list" bindtap="toggle" id="{{index}}" data-aim="detailData.remarkList">
+          <view class="detail-item-createDate">
+            {{item.createDate}}
+          </view>
+          <view class="detail-item subTitle noBorder">
+            {{item.commentator}}
+          </view>
+          <view class="detail-item noPaddingTop" wx:if="{{item.isOpen}}">
+            <view class="detail-item-textarea">
+              <text>{{item.remarkMsg?item.remarkMsg:'[无]'}}</text>
+            </view>
+          </view>
+        </view>
+    </block>
+  </view>
+</template>
+
+
+<!-- 工单基本信息模板 -->
+<template name="detail_wo_baseInfo">
+  <view class="detail-main">
+    <view class="detail-item title">基本信息</view>
+    <view class="detail-item">订单号码：<text>{{detailData.osCode}}</text></view>
+    <view class="detail-item">客户公司：<text>{{detailData.companyName}}</text></view>
+    <view class="detail-item">当前流程：<text>{{detailData.nowProcess}}</text></view>
+    <view class="detail-item">下一流程：<text>{{detailData.nextProcess}}</text></view>
+    <view class="detail-item">产品名称：<text>{{detailData.productionName}}</text></view>
+    <view class="detail-list">
+      <view class="detail-item subTitle noBorder noPaddingBottom">服务备注：</view>
+      <view class="detail-item">
+        <view class="detail-item-textarea">
+          <text>{{detailData.serviceRemark?detailData.serviceRemark:'[无]'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!-- 工单联系信息模板 -->
+<template name="detail_wo_contact">
+  <view class="detail-main">
+    <view class="detail-item title">联系信息</view>
+    <view class="detail-item">客户名称：<text>{{detailData.customer}}</text></view>
+    <view class="detail-item">客户电话：<text>{{detailData.customerTel}}</text></view>
+    <view class="detail-item">创建人：<text>{{detailData.salesman}}</text></view>
+    <view class="detail-item">创建人电话：<text>{{detailData.salesmanTel}}</text></view>
+  </view>
+</template>
+
+<!-- 审批备注模板 -->
+<template name="detail_wo_process">
+  <view class="detail-main">
+    <view class="detail-item title">工单流程明细</view>
+      <block wx:for="{{detailData.processList}}" wx:key="index">
+        <view class="detail-list" bindtap="toggle" id="{{index}}" data-aim="detailData.processList">
+          <view class="detail-item-createDate" wx:if="{{item.createDate}}">
+            {{item.createDate}}
+          </view>
+          <view class="detail-item subTitle noBorder" wx:if="{{item.processType}}">
+            {{item.processType}}
+          </view>
+          <view class="detail-item noPaddingTop" wx:if="{{item.isOpen}}">
+            <view class="detail-item-textarea">
+              <text>{{item.processRemark?item.processRemark:'[无]'}}</text>
+            </view>
+          </view>
+        </view>
+    </block>
+  </view>
+</template>
+
+<!-- 产品基本信息模板 -->
+<template name="detail_production_baseInfo">
+  <view class="detail-main">
+    <view class="detail-item title">产品信息</view>
+    <view class="detail-item">产品名称：<text>{{detailData.productionName}}</text></view>
+    <view class="detail-item">产品编码：<text>{{detailData.productionCode}}</text></view>
+    <view class="detail-item">产品类别：<text>{{detailData.productionType}}</text></view>
+    <view class="detail-item">产品价格：<text>{{detailData.productionPrice}}</text></view>
+    <view class="detail-item">服务部门：<text>{{detailData.productionDepartment}}</text></view>
+    <view class="detail-item">服务地区：<text>{{detailData.productionArea}}</text></view>
+    <view class="detail-list">
+      <view class="detail-item subTitle noBorder noPaddingBottom">产品备注：</view>
+      <view class="detail-item">
+        <view class="detail-item-textarea">
+          <text>{{detailData.productionRemark?detailData.productionRemark:'[无]'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!-- 客户基本信息模板 -->
+<template name="detail_customer_baseInfo">
+  <view class="detail-main">
+    <view class="detail-item title">客户信息</view>
+    <view class="detail-item">客户名称：<text>{{detailData.customerName}}</text></view>
+    <view class="detail-item">客户类型：<text>{{detailData.customerType}}</text></view>
+    <view class="detail-item">客户电话：<text>{{detailData.customerTel}}</text></view>
+    <view class="detail-item">客户地址：<text>{{detailData.customerAddress}}</text></view>
+    <view class="detail-item">客户地区：<text>{{detailData.customerArea}}</text></view>
+    <view class="detail-item">创建人：<text>{{detailData.creater}}</text></view>
+    <view class="detail-list">
+      <view class="detail-item subTitle noBorder noPaddingBottom">客户备注：</view>
+      <view class="detail-item">
+        <view class="detail-item-textarea">
+          <text>{{detailData.customerRemark?detailData.customerRemark:'[无]'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!-- 客户公司列表模板 -->
+<template name="detail_customer_companyList">
+  <view class="detail-main">
+    <view class="detail-item title">拥有企业</view>
+    <block wx:for="{{detailData.companyList}}" wx:key="index">
+      <navigator class="detail-list" url="{{'/pages/detail/detail?mode=company&id='+item.companyId}}">
+        <view class="detail-item subTitle noBorder">
+          <text>{{item.companyName}}</text>
+        </view>
+        <view class="detail-item noBorder sub noPaddingTop">
+          法人：<text>{{item.legalPerson}}</text>
+        </view>
+        <view class="detail-item-tip">
+          {{item.companyLv}}
+        </view>
+      </navigator>
+    </block>
+  </view>
+</template>
+
+<!-- 企业基本信息模板 -->
+<template name="detail_company_baseInfo">
+  <view class="detail-main">
+    <view class="detail-item title">企业信息</view>
+    <view class="detail-item">公司名称：<text>{{detailData.companyName}}</text></view>
+    <view class="detail-item">重要等级：<text>{{detailData.companyLv}}</text></view>
+    <view class="detail-item">公司法人：<text>{{detailData.legalPerson}}</text></view>
+    <view class="detail-item">公司地址：<text>{{detailData.companyAddress}}</text></view>
+    <view class="detail-item">国税号：<text>{{detailData.stateTax}}</text></view>
+    <view class="detail-item">地税号：<text>{{detailData.localTax}}</text></view>
+    <view class="detail-item">创建人：<text>{{detailData.creater}}</text></view>
+  </view>
+</template>
+
+<!-- 企业工单列表模板 -->
+<template name="detail_company_woList">
+  <view class="detail-main">
+    <view class="detail-item title">相关工单</view>
+    <block wx:for="{{detailData.woList}}" wx:key="index">
+      <view class="detail-list">
+        <view class="detail-item-createDate">
+          {{item.createDate}}
+        </view>
+        <view class="detail-item subTitle noBorder">
+          <text>{{item.productionName}}</text>
+        </view>
+        <view class="detail-item noBorder sub noPaddingTop">
+          服务人员：<text>{{item.staff}}</text>
+        </view>
+        <view class="detail-item-tip">
+          {{item.nowProcess}}
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

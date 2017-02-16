@@ -1,0 +1,28 @@
+<import src="/templates/template_list.wxml" />
+<import src="/templates/floatingButton.wxml" />
+
+<template is="floatingButton_add" />
+
+<view class="body">
+  <view class="list-empty" wx:if="{{listData.length <= 0}}">
+    数据库中没有匹配数据
+  </view>
+  <view class="list-os" wx:if="{{mode.os}}">
+    <template is="list_os" data="{{listData}}" />
+  </view>
+  <view class="list-wo" wx:if="{{mode.wo}}">
+    <template is="list_wo" data="{{listData}}" />
+  </view>
+  <view class="list-company" wx:if="{{mode.company}}">
+    <template is="list_company" data="{{listData}}" />
+  </view>
+  <view class="list-production" wx:if="{{mode.production}}">
+    <template is="list_production" data="{{listData}}" />
+  </view>
+  <view class="list-customer" wx:if="{{mode.customer}}">
+    <template is="list_customer" data="{{listData}}" />
+  </view>
+  <view class="list-complain" wx:if="{{mode.complain}}">
+    <template is="list_complain" data="{{listData}}" />
+  </view>
+</view>

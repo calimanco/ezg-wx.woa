@@ -1,0 +1,10 @@
+<template name="grid_default">
+  <view class="grids">
+    <block wx:for="{{grids}}" wx:key="index">
+      <navigator url="{{item.url}}" class="grid" hover-class="active">
+        <image class="grid-icon" mode="aspectFit" src="{{item.icon}}" />
+        <view class="grid-label">{{item.title}}</view>
+      </navigator>
+    </block>
+  </view>
+</template>

@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/works/works",
+        "pages/application/application",
+        "pages/login/login",
+
+        "pages/list/list",
+        "pages/search/search",
+        "pages/detail/detail",
+        "pages/edit/edit",
+        "pages/msg/msg"
+    ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "亿账柜OA",
+        "navigationBarBackgroundColor": "#952f2a",
+        "backgroundColor": "#f3f6f6",
+        "backgroundTextStyle": "dark"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#952f2a",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "position": "bottom",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "iconPath": "images/icon_index.png",
+            "selectedIconPath": "images/icon_index_HL.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/works/works",
+            "iconPath": "images/icon_work.png",
+            "selectedIconPath": "images/icon_work_HL.png",
+            "text": "工作"
+        }, {
+            "pagePath": "pages/application/application",
+            "iconPath": "images/icon_application.png",
+            "selectedIconPath": "images/icon_application_HL.png",
+            "text": "应用"
+        }]
+    },
+    "networkTimeout": {
+        "request": 60000,
+        "connectSocket": 60000,
+        "uploadFile": 60000,
+        "downloadFile": 60000
+    },
+    "debug": false
+}

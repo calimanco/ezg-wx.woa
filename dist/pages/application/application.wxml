@@ -1,0 +1,15 @@
+<import src="../../templates/grid.wxml"/>
+<import src="/templates/floatingButton.wxml" />
+
+<template is="floatingButton_add" />
+
+<view class="body application">
+  <view class="application-header">
+    <image class="application-header-icon" src="{{userInfo.avatarUrl}}"></image>
+    <text class="application-header-text">{{userInfo.nickName}}</text>
+    <button type="main" size="mini" class="application-header-button" bindtap="unBindAccount">解绑</button>
+  </view>
+  <view class="application-main">
+    <template is="grid_default" data="{{grids}}"/>
+  </view>
+</view>

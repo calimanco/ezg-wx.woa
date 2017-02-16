@@ -1,0 +1,35 @@
+<!-- 搜索栏模板 -->
+<template name="search_default">
+  <view class="search">
+    <view class="search-box">
+      <view class="search-box-icon">
+        <icon type="search" size="14"></icon>
+      </view>
+      <view class="search-box-input">
+        <input type="text" placeholder="搜索" value="{{inputVal}}" bindinput="inputTyping" bindconfirm="searchSubmit" class="search-input"/>
+      </view>
+      <view class="search-box-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="search_forwork">
+  <view class="search forwork">
+    <view class="search-box">
+      <view class="search-box-icon">
+        <icon type="search" size="14"></icon>
+      </view>
+      <view class="search-box-input">
+        <input type="text" placeholder="搜索" value="{{inputVal}}" bindinput="inputTyping" bindconfirm="searchSubmit" class="search-input"/>
+      </view>
+      <view class="search-box-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <view class="search-option">
+      <image class="search-icon" mode="aspectFit" src="/images/icon_option.png" />
+    </view>
+  </view>
+</template>

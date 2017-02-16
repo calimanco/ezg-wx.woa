@@ -1,0 +1,3 @@
+<import src="/templates/template_msg.wxml"/>
+
+<template is="{{msg.type}}" data="{{msg}}"/>

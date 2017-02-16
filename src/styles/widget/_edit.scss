@@ -1,0 +1,37 @@
+@import "../base/fn";
+
+.edit {
+  padding: 20rpx;
+  background: $backgroundColor_foreColor;
+
+  &-title {
+    line-height: 2;
+    margin-bottom: 10rpx;
+    border-bottom: 1rpx solid $lineColor_default;
+    font-size: $fontSize_title;
+    color: $textColor_title;
+  }
+
+  &-section {
+    display: flex;
+    &-textarea {
+      flex: 1;
+      padding: 20rpx;
+    }
+  }
+}
+
+.edit-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2rpx;
+
+  &-submit {
+    flex: 1;
+    border-radius: 0;
+  }
+}

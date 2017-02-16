@@ -1,0 +1,61 @@
+@import "../base/fn";
+
+%grids {
+  border-top: 1rpx solid $lineColor_default;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%grid {
+  padding: 50rpx 0;
+  width: 50%;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid $lineColor_default;
+  background-color: $backgroundColor_foreColor;
+  position: relative;
+  overflow: visible;
+  &.active {
+    background-color: $backgroundColor_active;
+  }
+  &:after{
+    @include setRightLine($lineColor_default);
+  }
+}
+
+%grid-icon {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+}
+
+%grid-label {
+  margin-top: 20rpx;
+  display: block;
+  text-align: center;
+  color: $textColor_title;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin grid($grids:true,$grid:true,$grid-icon:true,$grid-label:true) {
+   @if($grids){
+    .grids {
+      @extend %grids;
+    }
+  }
+  @if($grid) {
+    .grid {
+      @extend %grid;
+    }
+  }
+  @if($grid-icon) {
+    .grid-icon {
+      @extend %grid-icon;
+    }
+  }
+  @if($grid-label) {
+    .grid-label {
+      @extend %grid-label;
+    }
+  }
+}

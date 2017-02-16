@@ -1,0 +1,13 @@
+<import src="/templates/template_edit.wxml" />
+
+<view class="body">
+  <template is="edit_os_remark" wx:if="{{mode.os_remark}}" />
+  <template is="edit_wo_process" wx:if="{{mode.wo_process}}" />
+</view>
+
+<view class="edit-button" wx:if="{{mode.os_remark}}">
+  <button class="edit-button-submit" type="main" bindtap="postOSReviewRemark">提交</button>
+</view>
+<view class="edit-button" wx:if="{{mode.wo_process}}">
+  <button class="edit-button-submit" type="main" bindtap="postWOProcessRemark">提交</button>
+</view>
