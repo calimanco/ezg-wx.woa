@@ -7,6 +7,24 @@
 因为小程序官方工具带有代码压缩和ES6转换功能，所以这部分功能由小程序官方工具实现，保留官方工具的调试功能。
 gulp中使用了大量开源插件，对此表示感谢。
 
+## 演示
+这里在官方模拟器上演示服务审批权限的功能，部分不能使用的功能类似。
+### 截图：
+![首页](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/index.png)
+
+![工作](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/works.png)
+
+![应用](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/application.png)
+
+![列表](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/list.png)
+
+![搜索](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/search.png)
+
+![详情](https://github.com/zwei76/ezg-wx.woa/raw/master/screenshots/detail.png)
+
+### 视频演示
+[演示视频地址](http://yuntv.letv.com/bcloud.html?uu=rz15dixzpg&vu=1ce67345e2&pu=31d219913c&auto_play=1&width=640&height=480&lang=zh_CN)
+
 ## 目录结构
 
  - src为开发目录；
